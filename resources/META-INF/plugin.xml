@@ -1,0 +1,36 @@
+<idea-plugin>
+  <id>com.solar.mybatis.plugin</id>
+  <name>MybatisGeneratorPlugin</name>
+  <version>1.0.1</version>
+  <vendor email="415233722@qq.com" url="">胡稍葛</vendor>
+
+  <description><![CDATA[
+      Click Tools-->MybatisGenerator.<br>
+      请确保修改的文件内容已经保存，而非在内存中。避免自动生成的文件覆盖内存中的信息。<br>
+      由于采用了Optional，所以目前仅支持jdk1.8及以上版本<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      支持java文件合并.<br>
+      <em>在xml中配置javaMergeSupported属性,并设置为true后，可合并用户修改过的java文件，不覆盖</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="solar-mybatis-generator" class="com.solar.action.MybatisGenerator" text="MybatisGenerator">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+    </action>
+  </actions>
+
+</idea-plugin>
